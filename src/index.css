@@ -1,13 +1,328 @@
-body {
+@import "~/node_modules/bootswatch/dist/quartz/bootstrap.min.css";
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+p {
+  margin: 0;
+}
+div {
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*************************************************************************************************/
+/********************navbar***********************************************************************/
+.navbar {
+  font-size: 1.6rem;
+}
+.brand-img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
+.btn {
+  padding: 1.2rem 1.6rem;
+}
+.navbar-nav {
+  text-align: center;
+}
+/******************************************************************************************************/
+/**************home************************************************************************************/
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+}
+.typewriter {
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+.btn-crypto {
+  font-weight: bolder;
+  font-size: 1.8rem;
+  padding-left: 1rem 1.4rem;
+}
+.img-center {
+  height: 30rem;
+  width: 80rem;
+}
+/**********************************************************************************/
+/************crypto***************************************************************/
+.crypto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 100vh;
+}
+.form {
+  padding: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-search {
+  width: 30rem;
+  padding: 1.2rem;
+}
+/********************form********************************************************/
+.input-search {
+  font-size: 1.6rem;
+}
+/********************card*******************************************************/
+.cards-container {
+  padding: 0 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+.card {
+  width: 25rem;
+  transition: 0.4s ease-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-coin {
+  height: 7rem;
+  width: 7rem;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.btn-card {
+  font-weight: bold;
+}
+.error-msg {
+  color: #fb94c8;
+  font-size: 3.2rem;
+}
+/**********pagination***********************************************************/
+.paginationBtns {
+  max-width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.paginationBtns a {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid white;
+  text-decoration: none;
+}
+.paginationBtns a:hover {
+  background-color: rgb(225, 24, 125);
+}
+
+.paginationActive a {
+  background-color: rgb(225, 24, 125);
+}
+/*********************************************************************************/
+/*************display-card*******************************************************/
+.display-card-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-display {
+  width: 80rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.card-display:hover {
+  transform: scale(1.01);
+}
+.icon-display {
+  height: 10rem;
+  width: 10rem;
+}
+.card-text {
+  display: flex;
+  gap: 2rem;
+}
+.detail-display-card {
+  border-top: 1px solid rgba(255, 255, 255, 0.405);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.card-title-display {
+  font-size: 3.2rem;
+}
+.label {
+  font-weight: bolder;
+}
+.twitter-icon {
+  font-size: 5rem;
+}
+
+/*******************************************************************************/
+/*************footer************************************************************/
+.footer {
+  height: 7rem;
+  background-color: #e1187d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-footer {
+  font-size: 1.6rem;
+}
+/**************************************************************************/
+/*******responsive*********************************************************/
+@media (max-width: 1030px) {
+}
+@media (max-width: 912px) {
+}
+@media (max-width: 870px) {
+  .card-display {
+    width: 70rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .img-center {
+    height: 30rem;
+    width: 70rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .img-center {
+    height: 20rem;
+    width: 50rem;
+  }
+  .typewriter {
+    font-size: 3.6rem;
+  }
+  .paginationBtns a {
+    padding: 0.6rem;
+  }
+  .card-display {
+    width: 50rem;
+  }
+}
+@media (max-width: 415px) {
+  .img-center {
+    height: 17rem;
+    width: 41rem;
+  }
+  .typewriter {
+    font-size: 3.2rem;
+  }
+  .paginationBtns {
+    gap: 1rem;
+  }
+  .card-display {
+    width: 38rem;
+    font-size: 1.4rem;
+  }
+  .icon-display {
+    height: 7rem;
+    width: 7rem;
+  }
+  .twitter-icon {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 395px) {
+  .img-center {
+    height: 17rem;
+    width: 39rem;
+  }
+  .paginationBtns {
+    height: 30px;
+    gap: 0.3rem;
+  }
+  .card-display {
+    width: 35rem;
+  }
+}
+@media (max-width: 380px) {
+  .typewriter {
+    font-size: 3rem;
+  }
+  .text-footer {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 365px) {
+  .img-center {
+    height: 15rem;
+    width: 36rem;
+  }
+  .card-display {
+    width: 32rem;
+  }
+  .card-title-display {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 282px) {
+  .img-center {
+    height: 10rem;
+    width: 28rem;
+  }
+  .typewriter {
+    font-size: 2.2rem;
+  }
+  .btn-crypto {
+    font-weight: bolder;
+    font-size: 1.4rem;
+    padding-left: 1rem 1.4rem;
+  }
+  .text-footer {
+    font-size: 1.2rem;
+  }
+  .input-search {
+    width: 26rem;
+  }
+
+  .paginationBtns {
+    height: 20px;
+    gap: 0.3rem;
+  }
+  .paginationBtns a {
+    padding: 0.3rem;
+  }
+  .card-display {
+    width: 25rem;
+    font-size: 0.9rem;
+  }
+  .card-title-display {
+    font-size: 2rem;
+  }
 }
