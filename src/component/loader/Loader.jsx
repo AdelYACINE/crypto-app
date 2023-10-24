@@ -9,8 +9,6 @@ const Loader = () => {
         radius="9"
         color="#e1187d"
         ariaLabel="loading"
-        //  wrapperStyle
-        // wrapperClass
       />
     </div>
   );

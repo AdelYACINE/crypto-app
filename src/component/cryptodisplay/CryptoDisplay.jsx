@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import CryptoContext from "../../context/cryptoContext/CryptoContext";
 import { FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const CryptoDisplay = () => {
   const { listCoins } = useContext(CryptoContext);
@@ -11,7 +12,13 @@ const CryptoDisplay = () => {
   const coin = listCoins[id - 1];
 
   return (
-    <div className="display-card-container">
+    <motion.div
+      initial={{ y: 1000 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      exit={{ y: -1000 }}
+      className="display-card-container"
+    >
       <div className="card text-white bg-secondary mb-3 card-display">
         <div className="card-header">
           <img src={coin?.icon} alt="img" className="icon-coin icon-display" />
@@ -56,7 +63,7 @@ const CryptoDisplay = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

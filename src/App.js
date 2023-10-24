@@ -1,28 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./component/home/Home";
-import Crypto from "./component/crypto/Crypto";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./component/navbar/Navbar";
 import Footer from "./component/footer/Footer";
 import NavProvider from "./context/navbarContext/NavProvider";
-import CryptoDisplay from "./component/cryptodisplay/CryptoDisplay";
 import CryptoProvider from "./context/cryptoContext/CryptoProvider";
+import AnimateRoutes from "./component/animateRoute/AnimateRoutes";
 
 function App() {
   return (
-    <CryptoProvider>
-      <Router>
+    <Router>
+      <CryptoProvider>
         <NavProvider>
           <Navbar />
         </NavProvider>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/crypto" element={<Crypto />} />
-          <Route path="/cryptos/:id" element={<CryptoDisplay />} />
-        </Routes>
+        <AnimateRoutes />
+
         <Footer />
-      </Router>
-    </CryptoProvider>
+      </CryptoProvider>
+    </Router>
   );
 }
 

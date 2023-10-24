@@ -5,6 +5,7 @@ import Loader from "../loader/Loader";
 import CryptoContext from "../../context/cryptoContext/CryptoContext";
 import FormSearch from "./FormSearch";
 import ErrorMsg from "./ErrorMsg";
+import { motion } from "framer-motion";
 
 const Crypto = () => {
   const {
@@ -23,7 +24,13 @@ const Crypto = () => {
 
   return (
     <>
-      <div className="crypto-container">
+      <motion.div
+        initial={{ y: 1000 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        exit={{ y: -1000 }}
+        className="crypto-container"
+      >
         <FormSearch />
 
         {!isLoading ? (
@@ -63,7 +70,7 @@ const Crypto = () => {
           activeClassName={"paginationActive"}
           forcePage={Math.min(pageNumber, pageCount - 1)}
         />
-      </div>
+      </motion.div>
     </>
   );
 };

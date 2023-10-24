@@ -1,5 +1,6 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [text] = useTypewriter({
@@ -13,7 +14,13 @@ const Home = () => {
 
   return (
     <>
-      <div className="home">
+      <motion.div
+        initial={{ y: 1000 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        exit={{ y: -1000 }}
+        className="home"
+      >
         <div className="home-container">
           <div className="typewriter-container">
             <h1 className="typewriter">
@@ -39,7 +46,7 @@ const Home = () => {
             See Our Crypto
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
