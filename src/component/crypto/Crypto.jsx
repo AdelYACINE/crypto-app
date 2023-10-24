@@ -28,7 +28,7 @@ const Crypto = () => {
         initial={{ y: 1000 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        exit={{ y: -1000 }}
+        exit={{ opacity: 0 }}
         className="crypto-container"
       >
         <FormSearch />
