@@ -13,10 +13,10 @@ const CryptoDisplay = () => {
 
   return (
     <motion.div
-      initial={{ y: 1000 }}
-      animate={{ y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      exit={{ y: -1000 }}
+      exit={{ opacity: 0 }}
       className="display-card-container"
     >
       <div className="card text-white bg-secondary mb-3 card-display">
